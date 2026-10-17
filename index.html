@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Double your profits. Run your business on autopilot. Sales, staff, customers and profit for every store in one login.">
+<meta property="og:title" content="Black Gold · Run your business on autopilot">
+<meta property="og:description" content="Double your profits. Every store, salesman, customer and rupee in one login.">
+<meta property="og:image" content="https://blackgoldglobal.in/og-logo.png">
+<meta property="og:url" content="https://blackgoldglobal.in/">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon.png">
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Black Gold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Sora:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one dark command-centre page. Hero = headline left, live console right, gold particle field behind. Sections stack: problems grid, statement band, tools-out strip, module grid, 90-day list, proof, CTA. */
+:root {
+  --void: #FFFFFF;
+  --panel: #F6F5F2;
+  --panel-2: #EFEDE7;
+  --line: #E4DFD3;
+  --text: #121110;
+  --muted: #6B6355;
+  --gold: #D9AE48;
+  --gold-hi: #F7E7A1;
+  --gold-lo: #9A7420;
+  --ok: #7FD1A0;
+  --f-display: "Michroma", "Eurostile", "Arial Black", sans-serif;
+  --f-body: "Sora", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, monospace;
+  --grad: linear-gradient(115deg, var(--gold-hi), #D4A537 40%, var(--gold-lo) 72%, #E8C766);
+  --grad-text: linear-gradient(115deg, #C9962E, #A67C1E 45%, #7A5A12 80%, #B8892A);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--void); color: var(--text); font-family: var(--f-body); font-weight: 300; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); }
+
+/* Nav */
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--void) 78%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.logo svg { height: 30px; width: auto; display: block; }
+.links { display: flex; gap: 28px; font-size: 13px; color: var(--muted); }
+.links a { text-decoration: none; }
+.links a:hover { color: var(--text); }
+.btn { display: inline-flex; align-items: center; gap: 10px; font: 600 14px var(--f-body); text-decoration: none; color: #0A0906; background: var(--grad); padding: 13px 22px; border: 0; cursor: pointer; clip-path: polygon(0 0, 100% 0, 100% 70%, calc(100% - 12px) 100%, 0 100%); transition: filter .2s, transform .2s; }
+.btn:hover { filter: brightness(1.12); transform: translateY(-1px); }
+.btn.ghost { background: none; color: var(--text); border: 1px solid var(--line); clip-path: none; }
+.btn.ghost:hover { border-color: var(--gold); }
+.btn.sm { padding: 10px 16px; font-size: 13px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+#field { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .6; }
+.hero::after { content: ""; position: absolute; left: -10%; right: -10%; bottom: -1px; height: 220px; background:
+  linear-gradient(to top, var(--void), transparent 90%),
+  repeating-linear-gradient(90deg, color-mix(in srgb, var(--gold) 22%, transparent) 0 1px, transparent 1px 64px);
+  transform: perspective(380px) rotateX(58deg); transform-origin: bottom; pointer-events: none; opacity: .5; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding-block: clamp(56px, 9vw, 112px) clamp(64px, 9vw, 120px); }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #9A7420; display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--gold); }
+h1, h2 { font-family: var(--f-display); font-weight: 400; letter-spacing: -.01em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 5vw, 56px); line-height: 1.12; margin: 18px 0 22px; }
+.gold { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lede { font-size: clamp(16px, 1.6vw, 19px); color: var(--muted); max-width: 46ch; margin: 0 0 32px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Console */
+.console, .one, .wa-float { --panel: #0D0C0A; --panel-2: #1A1813; --line: #2A251C; --text: #F2EBDA; --muted: #A39883; color: var(--text); }
+.console { background: var(--panel); border: 1px solid var(--line); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 10%, transparent), 0 30px 80px -30px color-mix(in srgb, var(--gold) 35%, transparent); font-family: var(--f-mono); font-size: 12.5px; min-width: 0; }
+.c-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--muted); }
+.live { display: inline-flex; align-items: center; gap: 8px; color: var(--ok); }
+.live i { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 10px var(--ok); animation: pulse 1.6s infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+.c-body { padding: 16px; display: grid; gap: 14px; }
+.bars { display: grid; gap: 9px; }
+.bar { display: grid; grid-template-columns: 62px 1fr 64px; gap: 10px; align-items: center; color: var(--muted); }
+.bar span:last-child { text-align: right; color: var(--text); font-variant-numeric: tabular-nums; }
+.track { height: 6px; background: var(--panel-2); position: relative; overflow: hidden; }
+.track b { position: absolute; inset: 0 auto 0 0; background: var(--grad); }
+.feed { border-top: 1px dashed var(--line); padding-top: 12px; display: grid; gap: 7px; min-height: 120px; }
+.feed div { display: flex; gap: 10px; animation: rise .5s ease both; }
+.feed em { font-style: normal; color: var(--gold); flex: none; width: 74px; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+.c-foot { padding: 10px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+.stat { padding: 26px clamp(16px, 2.4vw, 32px); border-right: 1px solid var(--line); }
+.stat:last-child { border-right: 0; }
+.stat strong { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(22px, 2.6vw, 32px); font-variant-numeric: tabular-nums; }
+.stat span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* Sections */
+section { padding-block: clamp(72px, 10vw, 120px); }
+.head { max-width: 760px; margin-bottom: 44px; display: grid; gap: 14px; }
+h2 { font-size: clamp(24px, 3.4vw, 40px); line-height: 1.2; }
+
+.problems { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.prob { background: var(--void); padding: 28px; display: grid; gap: 14px; align-content: start; transition: background .25s; }
+.prob:hover { background: var(--panel); }
+.tag { font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em; color: #9A7420; }
+.prob p { margin: 0; font-size: 19px; font-weight: 400; line-height: 1.4; }
+
+.band { border-block: 1px solid var(--line); background: radial-gradient(ellipse at center, color-mix(in srgb, var(--gold) 12%, transparent), transparent 70%); text-align: center; padding-block: clamp(64px, 9vw, 104px); }
+.band p { font-family: var(--f-display); font-size: clamp(20px, 3vw, 34px); line-height: 1.35; margin: 0 auto; max-width: 24ch; text-wrap: balance; }
+.band s { color: var(--muted); text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+
+.swap { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { font-family: var(--f-mono); font-size: 13px; padding: 9px 14px; border: 1px solid var(--line); color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--gold) 70%, transparent); }
+.one { text-align: center; display: grid; gap: 10px; justify-items: center; padding: 28px 34px; border: 1px solid var(--gold); background: var(--panel); box-shadow: 0 0 60px -20px var(--gold); }
+.one strong { font-family: var(--f-display); font-weight: 400; font-size: 22px; white-space: nowrap; }
+.one span { font-family: var(--f-mono); font-size: 12px; color: var(--muted); letter-spacing: .1em; }
+
+.modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.mod { position: relative; padding: 26px; background: var(--void); box-shadow: 0 1px 0 var(--line), 0 18px 40px -28px rgba(18,17,16,.25); border: 1px solid var(--line); display: grid; gap: 10px; align-content: start; overflow: hidden; }
+.mod::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 100%; height: 1px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .45s; }
+.mod:hover::before { transform: scaleX(1); }
+.mod .idx { font-family: var(--f-mono); font-size: 11px; color: #9A7420; letter-spacing: .14em; }
+.mod h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.mod p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+.results { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; list-style: none; margin: 0; padding: 0; }
+.results li { display: flex; gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); font-size: 17px; font-weight: 400; }
+.results li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 8px; background: var(--grad); clip-path: polygon(0 0, 100% 0, 100% 100%); }
+
+.proof { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.proof .head { margin: 0; }
+.proof .lede { margin: 0; }
+.nums { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.nums div { background: var(--void); padding: 26px; }
+.nums strong { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(22px, 2.6vw, 30px); }
+.nums span { font-size: 13px; color: var(--muted); }
+
+.cta { text-align: center; position: relative; overflow: hidden; border-top: 1px solid var(--line); }
+.cta::before { content: ""; position: absolute; left: 50%; top: 100%; width: 900px; height: 900px; translate: -50% -50%; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--gold) 22%, transparent), transparent 62%); pointer-events: none; }
+.cta .wrap { position: relative; display: grid; gap: 22px; justify-items: center; }
+.cta h2 { font-size: clamp(26px, 4vw, 48px); }
+.mail { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-mono); font-size: 14px; color: var(--muted); }
+.mail code { color: var(--text); user-select: all; }
+.mail button { font: 500 12px var(--f-mono); color: #9A7420; background: none; border: 1px solid var(--line); padding: 5px 10px; cursor: pointer; }
+.fine { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-block: 28px; font-family: var(--f-mono); font-size: 12px; color: var(--muted); letter-spacing: .08em; }
+footer svg { height: 24px; width: auto; }
+
+@media (max-width: 920px) {
+  .hero .wrap, .proof, .swap { grid-template-columns: 1fr; }
+  .problems, .modules { grid-template-columns: 1fr 1fr; }
+  .links { display: none; }
+}
+@media (max-width: 620px) {
+  .problems, .modules, .results { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: 0; }
+  .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .logo svg { height: 24px; }
+  .nav-cta { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+.swap > *, .stat, .proof > * { min-width: 0; }
+.chip { white-space: nowrap; }
+@media (max-width: 460px) { .nums, .stats { grid-template-columns: 1fr; } .stat { border-right: 0 !important; border-bottom: 1px solid var(--line); } .stat:last-child { border-bottom: 0; } .eyebrow::before { display: none; } }
+.strip { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--panel); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.strip-track { display: flex; width: max-content; animation: slide 38s linear infinite; }
+.strip-track span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding: 16px 26px; white-space: nowrap; display: inline-flex; align-items: center; gap: 26px; }
+.strip-track span::after { content: ""; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; }
+.steps::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: linear-gradient(90deg, var(--gold), var(--line)); }
+.steps li { position: relative; padding-top: 34px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.steps li::before { content: ""; position: absolute; top: 0; left: 0; width: 15px; height: 15px; background: var(--void); border: 2px solid var(--gold); transform: rotate(45deg); box-shadow: 0 0 14px color-mix(in srgb, var(--gold) 50%, transparent); }
+.steps li:last-child::before { background: var(--gold); }
+.day { font-family: var(--f-mono); font-size: 12px; letter-spacing: .16em; color: #9A7420; }
+.steps h3, .safe h3 { margin: 0; font-size: 18px; font-weight: 600; }
+.steps p, .safe p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+.safe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.safe div { background: var(--void); padding: 28px; display: grid; gap: 8px; align-content: start; }
+
+.faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+.faq-wrap > * { min-width: 0; }
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 20px 36px 20px 0; position: relative; font-size: 17px; font-weight: 400; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; translate: 0 -50%; font-family: var(--f-mono); font-size: 20px; color: var(--gold); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.faq details p { margin: 0 0 20px; color: var(--muted); max-width: 60ch; }
+
+@media (max-width: 920px) { .steps { grid-template-columns: 1fr 1fr; row-gap: 32px; } .steps::before { display: none; } .safe { grid-template-columns: 1fr; } .faq-wrap { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 460px) { .steps { grid-template-columns: 1fr; } }
+.mod-top { display: flex; align-items: center; justify-content: space-between; }
+.ico { width: 30px; height: 30px; fill: none; stroke: url(#gold-d); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--gold) 35%, transparent)); }
+
+.demo-form { width: 100%; max-width: 640px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; text-align: left; margin-top: 6px; }
+.demo-form label { display: grid; gap: 6px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); min-width: 0; }
+.demo-form input, .demo-form select { font: 400 16px var(--f-body); color: var(--text); background: var(--panel); border: 1px solid var(--line); padding: 13px 14px; width: 100%; border-radius: 0; }
+.demo-form input::placeholder { color: color-mix(in srgb, var(--muted) 55%, transparent); }
+.demo-form input:focus, .demo-form select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 20%, transparent); }
+.demo-form .wa-send { grid-column: 1 / -1; justify-content: center; padding-block: 16px; font-size: 15px; }
+.form-note { grid-column: 1 / -1; margin: 0; text-align: center; color: #9A7420; font-size: 13px; }
+
+.wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px 12px 14px; background: var(--panel); color: var(--text); border: 1px solid var(--gold); text-decoration: none; font: 600 13px var(--f-body); box-shadow: 0 10px 40px -10px color-mix(in srgb, var(--gold) 60%, transparent); transition: transform .2s; }
+.wa-float:hover { transform: translateY(-2px); }
+.wa-float svg { width: 22px; height: 22px; fill: none; stroke: url(#gold); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 620px) { .demo-form { grid-template-columns: 1fr; } .wa-float span { display: none; } .wa-float { padding: 14px; } }
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="110" y2="120">
+      <stop offset="0" stop-color="#F7E7A1"/><stop offset=".38" stop-color="#D4A537"/><stop offset=".7" stop-color="#9A7420"/><stop offset="1" stop-color="#E8C766"/>
+    </linearGradient>
+    <linearGradient id="gold-d" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
+      <stop offset="0" stop-color="#D4A537"/><stop offset=".6" stop-color="#9A7420"/><stop offset="1" stop-color="#B8892A"/>
+    </linearGradient>
+    <symbol id="bg-logo" viewBox="-2 -2 354 68">
+      <g transform="translate(-16 -16) scale(0.8)"><polygon fill="#121110" points="20,22.83 20,100 97.17,100"/><polygon fill="url(#gold)" points="22.83,20 100,20 100,97.17"/><rect x="20" y="20" width="80" height="80" fill="none" stroke="url(#gold)" stroke-width="3"/></g>
+      <g transform="translate(88 22)" fill="none" stroke="#121110" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter"><path d="M1.5 10H18a4.25 4.25 0 0 0 0-8.5H1.5V18.5H18.25a4.25 4.25 0 0 0 0-8.5H1.5"/><path transform="translate(30 0)" d="M1.5 1.5V18.5H20"/><path transform="translate(56 0)" d="M1.5 18.5V8a6.5 6.5 0 0 1 6.5-6.5H16a6.5 6.5 0 0 1 6.5 6.5V18.5M1.5 11.5H22.5"/><path transform="translate(86 0)" d="M22.5 1.5H8a6.5 6.5 0 0 0-6.5 6.5V12a6.5 6.5 0 0 0 6.5 6.5H22.5"/><path transform="translate(116 0)" d="M1.5 1.5V18.5M1.5 10H9L20.5 1.5M9 10L20.5 18.5"/><path transform="translate(152 0)" d="M22.5 1.5H8a6.5 6.5 0 0 0-6.5 6.5V12a6.5 6.5 0 0 0 6.5 6.5H22.5V10H13"/><path transform="translate(182 0)" d="M8 1.5H16a6.5 6.5 0 0 1 6.5 6.5V12a6.5 6.5 0 0 1-6.5 6.5H8a6.5 6.5 0 0 1-6.5-6.5V8a6.5 6.5 0 0 1 6.5-6.5Z"/><path transform="translate(212 0)" d="M1.5 1.5V18.5H20"/><path transform="translate(238 0)" d="M1.5 1.5H16a6.5 6.5 0 0 1 6.5 6.5V12a6.5 6.5 0 0 1-6.5 6.5H1.5Z"/></g>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Black Gold home"><svg viewBox="-2 -2 354 68"><use href="#bg-logo"/></svg></a>
+    <div class="links"><a href="#problems">Problems</a><a href="#system">The System</a><a href="#launch">30 Days</a><a href="#proof">Why Us</a><a href="#faq">FAQ</a></div>
+    <a class="btn sm nav-cta" href="#demo">Book a Demo</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <h1>Double your profits. <span class="gold">Run your business on autopilot.</span></h1>
+      <p class="lede">Your family built the business. Black Gold runs every store, salesman, customer and rupee from one login.</p>
+      <div class="ctas">
+        <a class="btn" href="#demo">Book a Private Demo →</a>
+        <a class="btn ghost" href="#problems">See what it fixes</a>
+      </div>
+    </div>
+
+    <div class="console" aria-label="Sample dashboard">
+      <div class="c-head"><span>BLACK GOLD / command</span><span class="live"><i></i>LIVE</span></div>
+      <div class="c-body">
+        <div class="bars">
+          <div class="bar"><span>Store 1</span><div class="track"><b style="width:92%"></b></div><span>₹4.82L</span></div>
+          <div class="bar"><span>Store 2</span><div class="track"><b style="width:74%"></b></div><span>₹3.91L</span></div>
+          <div class="bar"><span>Store 3</span><div class="track"><b style="width:58%"></b></div><span>₹3.07L</span></div>
+          <div class="bar"><span>Store 4</span><div class="track"><b style="width:41%"></b></div><span>₹2.16L</span></div>
+        </div>
+        <div class="feed" id="feed"></div>
+      </div>
+      <div class="c-foot">Sample view · illustrative figures</div>
+    </div>
+  </div>
+</header>
+
+<div class="strip" aria-label="What Black Gold covers"><div class="strip-track"><span>WhatsApp</span><span>Telecalling</span><span>Walk-ins</span><span>Billing data</span><span>Biometric attendance</span><span>Payroll</span><span>Customer CRM</span><span>Tasks</span><span>Stock audit</span><span>Profit reports</span><span>WhatsApp</span><span>Telecalling</span><span>Walk-ins</span><span>Billing data</span><span>Biometric attendance</span><span>Payroll</span><span>Customer CRM</span><span>Tasks</span><span>Stock audit</span><span>Profit reports</span></div></div>
+
+<div class="stats wrap" style="padding-inline:0">
+  <div class="stat"><strong>6</strong><span>Live stores</span></div>
+  <div class="stat"><strong>95,000+</strong><span>Customers managed</span></div>
+  <div class="stat"><strong>9 → 1</strong><span>Tools replaced</span></div>
+  <div class="stat"><strong>1</strong><span>Version of the truth</span></div>
+</div>
+
+<section id="problems">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The real problems</span>
+      <h2>Where your profit is <span class="gold">leaking today.</span></h2>
+    </div>
+    <div class="problems">
+      <div class="prob"><span class="tag">STAFF</span><p>Staff run on trust. Payday runs on arguments.</p></div>
+      <div class="prob"><span class="tag">MEMORY</span><p>The whole business lives in one person's head.</p></div>
+      <div class="prob"><span class="tag">CHAOS</span><p>Five apps, three registers, one tired brain.</p></div>
+      <div class="prob"><span class="tag">LAG</span><p>You hear about problems weeks too late.</p></div>
+      <div class="prob"><span class="tag">LEADS</span><p>Walk-ins walk out and vanish forever.</p></div>
+      <div class="prob"><span class="tag">PROFIT</span><p>Turnover you know. Profit you guess.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <p>Today every family argument is <s>opinion vs opinion</s>. <span class="gold">Black Gold makes it fact vs fact.</span></p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap swap">
+    <div class="head" style="margin:0">
+      <span class="eyebrow">Everything in one</span>
+      <h2>Others give you a CRM. <span class="gold">Black Gold runs the whole business.</span></h2>
+      <div class="chips" style="margin-top:12px">
+        <span class="chip">HRMS</span><span class="chip">CRM</span><span class="chip">Task manager</span><span class="chip">Ticket desk</span><span class="chip">Training portal</span><span class="chip">Marketing tool</span><span class="chip">Finance dashboards</span><span class="chip">Lead tracker</span><span class="chip">Stock audit sheets</span>
+      </div>
+    </div>
+    <div class="one"><strong class="gold">BLACK GOLD</strong><span>ONE LOGIN · ONE TRUTH</span></div>
+  </div>
+</section>
+
+<section id="system" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What it runs</span>
+      <h2>One backbone. <span class="gold">Your whole business on autopilot.</span></h2>
+    </div>
+    <div class="modules">
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-7M3 20h18"/></svg><span class="idx">SALES</span></div><h3>Sales Command</h3><p>Every store and salesman, side by side, on KRA and KPI scorecards.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12M6 9h12M9 4c5 0 5 9 0 9H6l8 7"/></svg><span class="idx">PROFIT</span></div><h3>Profit Cockpit</h3><p>Real gross and net profit, store by store.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3 2.8 3 6"/></svg><span class="idx">CRM</span></div><h3>Customer Memory</h3><p>Every customer remembered, segmented and scored with NPS.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.5-4A8 8 0 1 1 8 19.5Z"/><path d="M9 10c0 3 2 5 5 5"/></svg><span class="idx">WHATSAPP</span></div><h3>Marketing Engine</h3><p>Festivals, birthdays and win-backs, sent on time, automatically.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="idx">CALLING</span></div><h3>Built-in Telecalling</h3><p>Call from the system. Every outcome and follow-up logged.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><span class="idx">LEADS</span></div><h3>Walk-in Tracker</h3><p>Every visitor captured and followed until they buy.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 16.5c.6-1.5 1.9-2.2 3.5-2.2s2.9.7 3.5 2.2M15 10h3M15 14h3"/></svg><span class="idx">HRMS</span></div><h3>Staff &amp; Payroll</h3><p>Biometric attendance, leave, payroll and incentives in one click.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6h10M10 12h10M10 18h10M4 6l1.2 1.2L7.5 5M4 12l1.2 1.2L7.5 11M4 18l1.2 1.2L7.5 17"/></svg><span class="idx">PROCESS</span></div><h3>Tasks, Tickets, Training</h3><p>The business runs on process, not on shouting.</p></div>
+      <div class="mod"><div class="mod-top"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></svg><span class="idx">STOCK</span></div><h3>Stock Audit</h3><p>Spot dead stock before it becomes dead money.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="launch" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Go live</span>
+      <h2>Autopilot in <span class="gold">30 days.</span></h2>
+    </div>
+    <ol class="steps">
+      <li><span class="day">DAY 0</span><h3>Setup</h3><p>We map your stores, staff and roles.</p></li>
+      <li><span class="day">DAY 10</span><h3>Data in</h3><p>Your customers and sales history moved in.</p></li>
+      <li><span class="day">DAY 20</span><h3>Training</h3><p>On-site training for family and staff, in Hindi and Marathi.</p></li>
+      <li><span class="day">DAY 30</span><h3>Autopilot</h3><p>Reports, WhatsApp and payroll running on their own.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="results" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Within 90 days</span>
+      <h2>What autopilot looks like.</h2>
+    </div>
+    <ul class="results">
+      <li>Every store's sales on your phone by breakfast.</li>
+      <li>Payday becomes a formality, not a fight.</li>
+      <li>Lapsed customers start walking back in.</li>
+      <li>Problems caught in days, not months.</li>
+      <li>Your real profit, store by store.</li>
+      <li>The next generation inherits a system, not diaries.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="proof" style="padding-top:0">
+  <div class="wrap proof">
+    <div class="head">
+      <span class="eyebrow">Why trust us</span>
+      <h2>Proven in live stores. <span class="gold">Not in a slide deck.</span></h2>
+      <p class="lede">Black Gold already runs real retail stores every day: sales, customers, staff and marketing. Now it can run yours.</p>
+    </div>
+    <div class="nums">
+      <div><strong>1 login</strong><span>for the whole business</span></div>
+      <div><strong>6 stores</strong><span>running on it live today</span></div>
+      <div><strong>95,000+</strong><span>customers remembered</span></div>
+      <div><strong>Lakhs</strong><span>of WhatsApp messages sent</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="safe" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Your data</span>
+      <h2>Your numbers stay <span class="gold">your business.</span></h2>
+    </div>
+    <div class="safe">
+      <div><h3>Role-based access</h3><p>Staff see only what their job needs. Profit and salaries stay with you.</p></div>
+      <div><h3>Never sold or shared</h3><p>Your customer list is yours. It is never used for anyone else.</p></div>
+      <div><h3>Built for India's DPDP Act</h3><p>Customer data handled the way India's data protection law expects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq-wrap">
+    <div class="head">
+      <span class="eyebrow">Questions</span>
+      <h2>What owners ask us first.</h2>
+    </div>
+    <div class="faq"><details><summary>Do my staff need technical knowledge?</summary><p>No. If they can use WhatsApp, they can use Black Gold. We train everyone on-site, in Hindi and Marathi.</p></details><details><summary>Will my staff have to change how they bill?</summary><p>No. We connect Black Gold to your billing system during setup, so billing stays exactly as it is today.</p></details><details><summary>What happens to my old customer records?</summary><p>We move your existing customer and sales records in during setup. Nothing starts from zero.</p></details><details><summary>Does it send WhatsApp messages in my brand name?</summary><p>Yes. The WhatsApp engine is set up with your business name and logo before go-live.</p></details><details><summary>Can my staff see profit and salaries?</summary><p>Only if you allow it. Each person sees only what their role needs.</p></details><details><summary>Who helps us after go-live?</summary><p>A real person from our team, in your city, on call when you need us.</p></details></div>
+  </div>
+</section>
+
+<section class="cta" id="demo">
+  <div class="wrap">
+    <span class="eyebrow">Private demo</span>
+    <h2>Ready to double your profits? <span class="gold">See it run a real store.</span></h2>
+    <p class="lede" style="margin:0">Watch Black Gold run a live store for an hour. Ask the hard questions.</p>
+    <form class="demo-form" id="demo-form" hidden>
+      <label>Your name<input id="f-name" required autocomplete="name" placeholder="Rajesh Sharma"></label>
+      <label>Business name<input id="f-biz" required placeholder="Sharma Traders"></label>
+      <label>City<input id="f-city" required autocomplete="address-level2" placeholder="Nagpur"></label>
+      <label>Number of stores<select id="f-stores"><option>1</option><option selected>2 to 3</option><option>4 to 6</option><option>7 or more</option></select></label>
+      <a class="btn wa-send" id="f-send" href="#" target="_blank" rel="noopener">Book demo on WhatsApp →</a>
+      <p class="form-note" id="f-note" hidden>Fill in all four fields first.</p>
+    </form>
+    <div class="mail" hidden>or email <code id="addr">hello@fabos.in</code><button type="button" id="copy">Copy</button></div>
+    <span class="fine">By appointment · Nagpur, Maharashtra</span>
+  </div>
+</section>
+
+<a class="wa-float" id="wa-float" hidden href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.5-4A8 8 0 1 1 8 19.5Z"/><path d="M9 10c0 3 2 5 5 5"/></svg>
+  <span>Book a demo</span>
+</a>
+
+<footer>
+  <div class="wrap">
+    <svg viewBox="-2 -2 354 68" aria-label="Black Gold"><use href="#bg-logo"/></svg>
+    <span>ONE FAMILY · MANY STORES · ONE TRUTH</span>
+  </div>
+</footer>
+
+<script>
+// Gold particle network behind the hero
+(function () {
+  var c = document.getElementById('field'), x = c.getContext('2d'), pts = [], w, h, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size() {
+    w = c.offsetWidth; h = c.offsetHeight; c.width = w * dpr; c.height = h * dpr; x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.round(Math.min(90, w * h / 14000)); pts = [];
+    for (var i = 0; i < n; i++) pts.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3 });
+  }
+  function frame() {
+    x.clearRect(0, 0, w, h);
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i]; p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1;
+      for (var j = i + 1; j < pts.length; j++) {
+        var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = dx * dx + dy * dy;
+        if (d < 16000) { x.strokeStyle = 'rgba(166,124,30,' + (0.28 * (1 - d / 16000)) + ')'; x.lineWidth = 1; x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(q.x, q.y); x.stroke(); }
+      }
+      x.fillStyle = 'rgba(154,116,32,.7)'; x.fillRect(p.x - 1, p.y - 1, 2, 2);
+    }
+    if (!still) requestAnimationFrame(frame);
+  }
+  size(); frame(); window.addEventListener('resize', function () { size(); if (still) frame(); });
+})();
+
+// Console activity feed (sample events)
+(function () {
+  var feed = document.getElementById('feed');
+  var ev = [
+    ['WALK-IN', 'Store 2 · lead captured, follow-up set'],
+    ['WHATSAPP', '312 birthday wishes sent'],
+    ['PAYROLL', 'Computed for 48 staff'],
+    ['ALERT', '14 items unsold 90+ days'],
+    ['WIN-BACK', '27 lapsed customers called'],
+    ['PROFIT', 'Store 3 GP up 2.1% this week'],
+    ['TASK', 'Stock audit done · Store 4']
+  ];
+  var k = 0;
+  function push() {
+    var d = document.createElement('div');
+    d.innerHTML = '<em></em><span></span>';
+    d.firstChild.textContent = ev[k][0]; d.lastChild.textContent = ev[k][1];
+    feed.prepend(d); k = (k + 1) % ev.length;
+    while (feed.children.length > 4) feed.lastChild.remove();
+  }
+  for (var i = 0; i < 4; i++) push();
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(push, 2600);
+})();
+
+// WhatsApp booking. Set WA_NUMBER to the business WhatsApp number: country code + number, digits only.
+var WA_NUMBER = '919999999999';
+function waLink(text) { return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text); }
+document.getElementById('wa-float').href = waLink('Hi, I want to book a Black Gold demo.');
+(function () {
+  var ids = ['f-name', 'f-biz', 'f-city'], send = document.getElementById('f-send'), note = document.getElementById('f-note');
+  function val(id) { return document.getElementById(id).value.trim(); }
+  function ready() { return ids.every(function (id) { return val(id); }); }
+  function update() {
+    send.href = waLink('Hi, I want to book a Black Gold demo.\nName: ' + val('f-name') + '\nBusiness: ' + val('f-biz') + '\nCity: ' + val('f-city') + '\nStores: ' + document.getElementById('f-stores').value);
+    if (ready()) note.hidden = true;
+  }
+  document.getElementById('demo-form').addEventListener('input', update);
+  document.getElementById('demo-form').addEventListener('submit', function (e) { e.preventDefault(); });
+  send.addEventListener('click', function (e) { if (!ready()) { e.preventDefault(); note.hidden = false; } });
+  update();
+})();
+
+// Copy demo email
+document.getElementById('copy').addEventListener('click', function () {
+  var b = this, a = document.getElementById('addr');
+  function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1800); }
+  if (navigator.clipboard) navigator.clipboard.writeText(a.textContent).then(done, sel); else sel();
+  function sel() { var r = document.createRange(); r.selectNodeContents(a); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+});
+</script>
+
+</body>
+</html>
